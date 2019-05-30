@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TodoListItem } from './models';
+import { TodoDataService } from './todo-data.service';
 
 
 @Component({
@@ -9,11 +10,11 @@ import { TodoListItem } from './models';
 })
 export class TodoListComponent {
 
-  items: TodoListItem[] = [
-    { description: 'Fix Front Door', completed: false },
-    { description: 'Change bathroom lightbulbs', completed: false },
-    { description: 'Kill Thistles', completed: true }
-  ];
+  items: TodoListItem[];
+
+  constructor(private service: TodoDataService) {
+    this.items = service.getTodoList();
+  }
 
   markComplete(item: TodoListItem) {
     item.completed = true;
