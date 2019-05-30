@@ -12,4 +12,7 @@ export class EntryComponent implements OnInit {
   ngOnInit() {
   }
 
+  add(what: HTMLInputElement) {
+
+  }
 }
