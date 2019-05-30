@@ -3,7 +3,7 @@ export interface TodoListItem {
   completed: boolean;
 }
 
-export interface Summary {
+export interface TodoSummary {
   total: number;
   pending: number;
   completed: number;
