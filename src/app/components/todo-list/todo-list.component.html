@@ -1,4 +1,6 @@
-<app-entry></app-entry>
+<app-entry (itemAdded)="add($event)"></app-entry>
 <section>
-  <app-list></app-list>
+  <app-list [list]="items"
+            (completedCleared)="clearCompleted()"
+            (markedComplete)="markComplete($event)"></app-list>
 </section>
