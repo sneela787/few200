@@ -1,4 +1,4 @@
-import { TodoListItem } from './models';
+import { TodoListItem, TodoSummary } from './models';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -28,7 +28,7 @@ export class TodoDataService {
           total: list.length,
           pending: list.filter(x => !x.completed).length,
           completed: list.filter(x => x.completed).length
-        };
+        } as TodoSummary;
       })
     );
   }
