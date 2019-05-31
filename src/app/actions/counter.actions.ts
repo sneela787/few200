@@ -26,4 +26,7 @@ export class CountBySet implements Action {
 
 
 export type All =
-  CountIncremented | CountDecremented | CountReset | CountBySet;
+  CountIncremented |
+  CountDecremented |
+  CountReset |
+  CountBySet;
